@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
 	<meta charset="UTF-8">
@@ -170,6 +170,11 @@
 			margin: 0.5%;
 		}
 
+		.moazzen {
+			width: 23%;
+			margin: 0.5%;
+		}
+
 		@media screen and (max-width: 650px) {
 			.setting-footer {
 				text-align: center;
@@ -223,7 +228,7 @@
 		    border-radius: 10px;
 		    cursor: default;
 		    position: fixed;
-		    bottom: 10px;
+		    top: 10px;
 		    right: 10px;
 		    z-index: 4;
 		    padding: 10px;
@@ -235,6 +240,14 @@
 		.notif.show {
 			visibility: visible;
 			opacity: 1;
+		}
+
+		.selected-city {
+		    position: fixed;
+		    bottom: 10px;
+		    right: 10px;
+		    cursor: default;
+		    z-index: 4;
 		}
 
 		.version {
@@ -283,7 +296,7 @@
 				<hr>
 				<center>
 					<button class="bg-i btn"><img src="https://s21.picofile.com/file/8447003726/m1s.jpg" alt="https://s21.picofile.com/file/8447003500/m1.jpg"></button>
-					<button class="bg-i btn"><img src="https://raw.githubusercontent.com/sagharizadeh/religious-times/main/media/pictures/m2s.jpg" alt="https://s21.picofile.com/file/8447003518/m2.jpg"></button>
+					<button class="bg-i btn"><img src="https://s20.picofile.com/file/8447003734/m2s.jpg" alt="https://s21.picofile.com/file/8447003518/m2.jpg"></button>
 					<button class="bg-i btn"><img src="https://s21.picofile.com/file/8447003742/m3s.jpg" alt="https://s21.picofile.com/file/8447003526/m3.jpg"></button>
 					<button class="bg-i btn"><img src="https://s20.picofile.com/file/8447003750/m4s.jpg" alt="https://s21.picofile.com/file/8447003534/m4.jpg"></button>
 					<button class="bg-i btn"><img src="https://s21.picofile.com/file/8447003768/m5s.jpg" alt="https://s20.picofile.com/file/8447003542/m5.jpg"></button>
@@ -297,7 +310,7 @@
 					<button class="bg-i btn"><img src="https://s21.picofile.com/file/8447003868/m13s.jpg" alt="https://s21.picofile.com/file/8447003668/m13.jpg"></button>
 					<button class="bg-i btn"><img src="https://s20.picofile.com/file/8447003884/m14s.jpg" alt="https://s21.picofile.com/file/8447003676/m14.jpg"></button>
 					<button class="bg-i btn"><img src="https://s20.picofile.com/file/8447003892/m15s.jpg" alt="https://s21.picofile.com/file/8447003684/m15.jpg"></button>
-					<button class="bg-i btn"><img src="https://s21.picofile.com/file/8447003918/m16s.jpg" alt="https://s21.picofile.com/file/8447003718/m16.jpg"></button>
+					<button class="bg-i btn"><img src="https://s21.picofile.com/file/8447123442/m16s.jpg" alt="https://s21.picofile.com/file/8447003718/m16.jpg"></button>
 				</center>
 			</div>
 			<div class="cities-color w-75 mx-auto my-5">
@@ -326,11 +339,21 @@
 					<button class="cff btn btn-primary" style="font-family: tabassom;" value="tabassom">تبسم</button>
 				</center>
 			</div>
+			<div class="azan-setting w-75 mx-auto my-5">
+				<span class="px-3">موذن</span>
+				<hr>
+				<center>
+					<button class="moazzen btn btn-primary" value="https://s20.picofile.com/d/8447123076/427e57f5-c2e8-4fbb-a6b6-286b99e9be0b/mirdamad.mp3">میرداماد</button>
+					<button class="moazzen btn btn-primary" value="https://s20.picofile.com/d/8447123092/116659ae-6f28-47e2-9387-741a78ebcfec/tajisfahani.mp3">تاج اصفهانی</button>
+					<button class="moazzen btn btn-primary" value="https://s20.picofile.com/d/8447123134/38af84fd-62a2-4fb7-bb84-47981563a056/moazenzadeh.mp3">موذن زاده</button>
+					<button class="moazzen btn btn-primary" value="https://s21.picofile.com/d/8447123168/c1492462-81c2-44e9-89de-d3e08391671a/kazamzadeh.mp3">کاظم زاده</button>
+				</center>
+			</div>
 		</div>
 		<hr>
 		<div class="setting-footer px-2">
-			<span style="position: absolute; right: 2rem;">برنامه نویس: <a href="https://github.com/sagharizadeh" target="_blank">محمد حسین ساغری زاده</a></span>
-			<span style="position: absolute; left: 2rem;">با تشکر از <a href="https://prayer.aviny.com/PrayerTimes-WebService.aspx" target="_blank">وبسرویس اوقات شرعی شهید آوینی</a></span>
+			<span style="position: absolute; right: 2rem;">برنامه نویس: <a href="https://github.com/sagharizadeh">محمد حسین ساغری زاده</a></span>
+			<span style="position: absolute; left: 2rem;">با تشکر از <a href="https://prayer.aviny.com/PrayerTimes-WebService.aspx">وبسرویس اوقات شرعی شهید آوینی</a></span>
 		</div>
 	</div>
 	<button class="setting-icon"><i class="bi bi-gear"></i></button>
@@ -340,8 +363,9 @@
 			<div class="row">
 				<div class="col-md-8 mx-auto text-center">
 					<div class="clock my-3" dir="ltr">00:00:00</div>
-					<audio src="http://dl.aviny.com/voice/azan/moazenin/26-seyed-abas-mirdamad.mp3" class="azan w-100 my-3" controls></audio>
+					<audio src="https://s20.picofile.com/d/8447123076/427e57f5-c2e8-4fbb-a6b6-286b99e9be0b/mirdamad.mp3" class="azan w-100 my-3" controls></audio>
 					<div class="notif"></div>
+					<div class="selected-city"></div>
 					<div class="religious-times-info my-3">
 						<div class="rti-header font-weight-bold text-center px-3">
 							<span>اطلاعات شهر</span>
@@ -406,6 +430,9 @@
 					let azan_maghreb = await data.Maghreb;
 					let cityName = await data.CityName;
 					let notif = document.querySelector('.notif');
+					let selectedCity = document.querySelector('.selected-city');
+
+					selectedCity.innerHTML = `شهر انتخاب شده: ${e.target.textContent}`;
 
 					let check = () => {
 						if (clock.textContent == azan_sobh) {
@@ -513,6 +540,14 @@
 		cff.forEach(ff => {
 		    ff.addEventListener('click', e => {
 		        document.body.style.fontFamily = ff.value;
+				setting.classList.remove('show');
+		    });
+		});
+
+		let moazzens = document.querySelectorAll('.moazzen');
+		moazzens.forEach(moazzen => {
+		    moazzen.addEventListener('click', e => {
+		        azan.src = moazzen.value;
 				setting.classList.remove('show');
 		    });
 		});
