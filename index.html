@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>اپلیکیشن اوقات شرعی</title>
+	<link rel="icon" href="media/favicon.png">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+<body>
+	<noscript>این صفحه با جاوا اسکریپت کار میکند. لطفا جاوا اسکریپت مرورگر خود را فعال کنید.</noscript>
+	<span class="material-symbols-outlined setting-btn">settings</span>
+	<div class="setting">
+		<header>
+			<span>تنظیمات</span>
+			<span class="material-symbols-outlined close">close</span>
+		</header>
+		<hr>
+		<div class="into">
+			<div class="background">
+				<span>پس زمینه</span>
+				<hr>
+				<div class="images">
+					<img src="media/pictures/kaaba.jpg" alt="kaaba">
+					<img src="media/pictures/medina.jpg" alt="medina">
+					<img src="media/pictures/mashhad.jpg" alt="mashhad">
+					<div class="desired">
+						<span class="material-symbols-outlined">link</span>
+					</div>
+				</div>
+			</div>
+			<div class="muezzin">
+				<span>موذن</span>
+				<hr>
+				<div class="muezzins">
+					<button value="media/azans/mirdamad.mp3">میرداماد</button>
+					<button value="media/azans/moazenzadeh.mp3">موذن زاده</button>
+					<button value="media/azans/kazamzadeh.mp3">کاظم زاده</button>
+					<div class="desired">
+						<span class="material-symbols-outlined">link</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<main>
+		<div class="clock" dir="ltr">
+			<span class="clock-num">00:00:00</span>
+			<span class="material-symbols-outlined" style="font-size: 2rem;">schedule</span>
+		</div>
+		<audio src="media/azans/mirdamad.mp3" class="azan" controls></audio>
+		<form>
+			<input type="text" placeholder="نام شهر">
+		</form>
+		<div class="city-infos">
+			<div class="infos"></div>
+			<button class="next-day">اوقات شرعی فردا</button>
+		</div>
+	</main>
+	<div class="popup offline">
+		<header class="bg-lr"></header>
+		<div class="main">
+			<span class="material-symbols-outlined bg-lr c-r">wifi_off</span>
+			<div class="text">شما آفلاین هستید! <br>لطفا برای استفاده از این صفحه اینترنت خود را وصل کنید.</div>
+		</div>
+	</div>
+	<div class="popup online">
+		<header class="bg-lg"></header>
+		<div class="main">
+			<span class="material-symbols-outlined bg-lg c-g">done</span>
+			<div class="text">اینترنت شما وصل شد!</div>
+		</div>
+	</div>
+	<div class="popup no-city">
+		<header class="bg-ly"></header>
+		<div class="main">
+			<span class="material-symbols-outlined bg-ly c-y">warning</span>
+			<div class="text"></div>
+		</div>
+	</div>
+	<div class="popup notif">
+		<header class="bg-ly"></header>
+		<div class="main">
+			<span class="material-symbols-outlined bg-ly c-y">notifications</span>
+			<div class="text"></div>
+		</div>
+	</div>
+	<span class="version" dir="ltr">Version 2 ©</span>
+	<script src="library.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
