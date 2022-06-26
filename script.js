@@ -1,35 +1,35 @@
-// document.body.onload = () => {
+document.body.onload = () => {
 	ae(window, 'offline', e => {
 		wrapper();
-    	ca(qs('.offline'), 'show');
+		ca(qs('.offline'), 'show');
 	});
 
 	ae(window, 'online', e => {
-    	cr(qs('.offline'), 'show');
-    	ca(qs('.online'), 'show');
+		cr(qs('.offline'), 'show');
+		ca(qs('.online'), 'show');
 	});
 
 	si(1000, () => {
 		let time = new Date();
 		let hr = time.getHours();
-	    let min = time.getMinutes();
-	    let sec = time.getSeconds();
-	    hr = hr < 10 ? '0' + hr : hr;
-	    min = min < 10 ? '0' + min : min;
-	    sec = sec < 10 ? '0' + sec : sec;
+		let min = time.getMinutes();
+		let sec = time.getSeconds();
+		hr = hr < 10 ? '0' + hr : hr;
+		min = min < 10 ? '0' + min : min;
+		sec = sec < 10 ? '0' + sec : sec;
 		qs('.clock-num').textContent = `${hr}:${min}:${sec}`;
 	});
 
 	const wrapper = () => {
-    	let wrapper = cel('div');
-    	db.append(wrapper);
+		let wrapper = cel('div');
+		db.append(wrapper);
 	   	cn(wrapper, 'wrapper');
 		ae(wrapper, 'click', e => {
 			fe(qsa('.popup'), popup => {
-	    		cr(popup, 'show');
-	    		wrapper.remove();
+				cr(popup, 'show');
+				wrapper.remove();
 			});
-	    });
+		});
 	};
 
 	ae(qs('form'), 'submit', e => {
@@ -37,28 +37,28 @@
 		let city = qs('input').value;
 		fch(`https://api.keybit.ir/owghat/?city=${city}`, json => {
 			let res = json.result;
-		    if (json.ok == true) {
-		    	ih(
-		    		qs('.city-infos .infos'),
-		    		`
-		    			<span>نام شهر: ${city}</span>
-		    			<span>تاریخ: ${res.month}/${res.day}</span>
-		    			<span>اذان صبح: ${res.azan_sobh}</span>
-		    			<span>طلوع آفتاب: ${res.tolu_aftab}</span>
-		    			<span>اذان ظهر: ${res.azan_zohr}</span>
-		    			<span>غروب آفتاب: ${res.ghorub_aftab}</span>
-		    			<span>اذان مغرب: ${res.azan_maghreb}</span>
-		    			<span>نیمه شب شرعی: ${res.nimeshab}</span>
-		    		`
-		    	);
+			if (json.ok == true) {
+				ih(
+					qs('.city-infos .infos'),
+					`
+						نام شهر: ${city}
+						تاریخ: ${res.month}/${res.day}
+						اذان صبح: ${res.azan_sobh}
+						طلوع آفتاب: ${res.tolu_aftab}
+						اذان ظهر: ${res.azan_zohr}
+						غروب آفتاب: ${res.ghorub_aftab}
+						اذان مغرب: ${res.azan_maghreb}
+						نیمه شب شرعی: ${res.nimeshab}
+					`
+				);
 				qs('.city-infos').style.paddingBottom = '0.5rem';
 				qs('.next-day').style.display = 'block';
-				si(60000, () => {
+				si(30000, () => {
 					let hr = new Date().getHours();
-				    let min = new Date().getMinutes();
-				    hr = hr < 10 ? '0' + hr : hr;
-				    min = min < 10 ? '0' + min : min;
-				    let time = `${hr}:${min}`;
+					let min = new Date().getMinutes();
+					hr = hr < 10 ? '0' + hr : hr;
+					min = min < 10 ? '0' + min : min;
+					let time = `${hr}:${min}`;
 					if (time == res.azan_sobh) {
 						qs('.azan').play();
 						wrapper();
@@ -84,35 +84,35 @@
 							fch(`https://api.keybit.ir/owghat/?city=${city}&month=${res.month + 1}&day=1`, json => {
 								let res = json.result;
 								ih(
-						    		qs('.city-infos .infos'),
-						    		`
-						    			<span>نام شهر: ${city}</span>
-						    			<span>تاریخ: ${res.month}/${res.day}</span>
-						    			<span>اذان صبح: ${res.azan_sobh}</span>
-						    			<span>طلوع آفتاب: ${res.tolu_aftab}</span>
-						    			<span>اذان ظهر: ${res.azan_zohr}</span>
-						    			<span>غروب آفتاب: ${res.ghorub_aftab}</span>
-						    			<span>اذان مغرب: ${res.azan_maghreb}</span>
-						    			<span>نیمه شب شرعی: ${res.nimeshab}</span>
-						    		`
-						    	);
+									qs('.city-infos .infos'),
+									`
+										نام شهر: ${city}
+										تاریخ: ${res.month}/${res.day}
+										اذان صبح: ${res.azan_sobh}
+										طلوع آفتاب: ${res.tolu_aftab}
+										اذان ظهر: ${res.azan_zohr}
+										غروب آفتاب: ${res.ghorub_aftab}
+										اذان مغرب: ${res.azan_maghreb}
+										نیمه شب شرعی: ${res.nimeshab}
+									`
+								);
 							});
 						} else {
 							fch(`https://api.keybit.ir/owghat/?city=${city}&month=${res.month}&day=${res.day + 1}`, json => {
 								let res = json.result;
 								ih(
-						    		qs('.city-infos .infos'),
-						    		`
-						    			<span>نام شهر: ${city}</span>
-						    			<span>تاریخ: ${res.month}/${res.day}</span>
-						    			<span>اذان صبح: ${res.azan_sobh}</span>
-						    			<span>طلوع آفتاب: ${res.tolu_aftab}</span>
-						    			<span>اذان ظهر: ${res.azan_zohr}</span>
-						    			<span>غروب آفتاب: ${res.ghorub_aftab}</span>
-						    			<span>اذان مغرب: ${res.azan_maghreb}</span>
-						    			<span>نیمه شب شرعی: ${res.nimeshab}</span>
-						    		`
-						    	);
+									qs('.city-infos .infos'),
+									`
+										نام شهر: ${city}
+										تاریخ: ${res.month}/${res.day}
+										اذان صبح: ${res.azan_sobh}
+										طلوع آفتاب: ${res.tolu_aftab}
+										اذان ظهر: ${res.azan_zohr}
+										غروب آفتاب: ${res.ghorub_aftab}
+										اذان مغرب: ${res.azan_maghreb}
+										نیمه شب شرعی: ${res.nimeshab}
+									`
+								);
 							});
 						}
 					} else {
@@ -120,44 +120,44 @@
 							fch(`https://api.keybit.ir/owghat/?city=${city}&month=${res.month + 1}&day=1`, json => {
 								let res = json.result;
 								ih(
-						    		qs('.city-infos .infos'),
-						    		`
-						    			<span>نام شهر: ${city}</span>
-						    			<span>تاریخ: ${res.month}/${res.day}</span>
-						    			<span>اذان صبح: ${res.azan_sobh}</span>
-						    			<span>طلوع آفتاب: ${res.tolu_aftab}</span>
-						    			<span>اذان ظهر: ${res.azan_zohr}</span>
-						    			<span>غروب آفتاب: ${res.ghorub_aftab}</span>
-						    			<span>اذان مغرب: ${res.azan_maghreb}</span>
-						    			<span>نیمه شب شرعی: ${res.nimeshab}</span>
-						    		`
-						    	);
+									qs('.city-infos .infos'),
+									`
+										نام شهر: ${city}
+										تاریخ: ${res.month}/${res.day}
+										اذان صبح: ${res.azan_sobh}
+										طلوع آفتاب: ${res.tolu_aftab}
+										اذان ظهر: ${res.azan_zohr}
+										غروب آفتاب: ${res.ghorub_aftab}
+										اذان مغرب: ${res.azan_maghreb}
+										نیمه شب شرعی: ${res.nimeshab}
+									`
+								);
 							});
 						} else {
 							fch(`https://api.keybit.ir/owghat/?city=${city}&month=${res.month}&day=${res.day + 1}`, json => {
 								let res = json.result;
 								ih(
-						    		qs('.city-infos .infos'),
-						    		`
-						    			<span>نام شهر: ${city}</span>
-						    			<span>تاریخ: ${res.month}/${res.day}</span>
-						    			<span>اذان صبح: ${res.azan_sobh}</span>
-						    			<span>طلوع آفتاب: ${res.tolu_aftab}</span>
-						    			<span>اذان ظهر: ${res.azan_zohr}</span>
-						    			<span>غروب آفتاب: ${res.ghorub_aftab}</span>
-						    			<span>اذان مغرب: ${res.azan_maghreb}</span>
-						    			<span>نیمه شب شرعی: ${res.nimeshab}</span>
-						    		`
-						    	);
+									qs('.city-infos .infos'),
+									`
+										نام شهر: ${city}
+										تاریخ: ${res.month}/${res.day}
+										اذان صبح: ${res.azan_sobh}
+										طلوع آفتاب: ${res.tolu_aftab}
+										اذان ظهر: ${res.azan_zohr}
+										غروب آفتاب: ${res.ghorub_aftab}
+										اذان مغرب: ${res.azan_maghreb}
+										نیمه شب شرعی: ${res.nimeshab}
+									`
+								);
 							});
 						}
 					}
 				});
-		    } else {
-		    	wrapper();
-		    	ih(qs('.no-city .main .text'), `شهر "${city}" پیدا نشد!`);
-		    	ca(qs('.no-city'), 'show');
-		    }
+			} else {
+				wrapper();
+				ih(qs('.no-city .main .text'), `شهر "${city}" پیدا نشد!`);
+				ca(qs('.no-city'), 'show');
+			}
 		});
 	});
 
@@ -213,4 +213,4 @@
 			});
 		}
 	});
-// };
+};
