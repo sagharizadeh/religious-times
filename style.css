@@ -10,17 +10,17 @@
 }
 
 body {
-    margin: 0;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('media/pictures/kaaba.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+	margin: 0;
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('media/pictures/kaaba.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
 }
 
 hr {
-    margin-block-start: 0.5rem;
-    margin-block-end: 0.5rem;
+	margin-block-start: 0.5rem;
+	margin-block-end: 0.5rem;
 }
 
 .material-symbols-outlined {
@@ -32,12 +32,12 @@ hr {
 }
 
 .setting-btn {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    color: white;
-    font-size: 2.5rem !important;
-    cursor: pointer;
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+	color: white;
+	font-size: 2.5rem !important;
+	cursor: pointer;
 	transition: 0.5s;
 }
 
@@ -63,10 +63,10 @@ hr {
 }
 
 .setting header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1rem 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 1rem 0.5rem;
 }
 
 .setting .close:hover {
@@ -76,55 +76,55 @@ hr {
 
 .setting .into {
 	margin: 1rem;
-    padding: 1rem;
-    overflow-y: scroll;
-    height: 85%;
+	padding: 1rem;
+	overflow-y: scroll;
+	height: 85%;
 }
 .setting .into::-webkit-scrollbar {
-    width: 0.25rem;
+	width: 0.25rem;
 }
 .setting .into::-webkit-scrollbar-thumb {
-    background: white;
-    border-radius: 1rem;
+	background: white;
+	border-radius: 1rem;
 }
 .setting .into::-webkit-scrollbar-thumb:hover {
-    background: rgb(230, 230, 230);
+	background: rgb(230, 230, 230);
 }
 
 .images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .setting img {
-    width: 13rem;
-    height: 8rem;
-    object-fit: cover;
+	width: 13rem;
+	height: 8rem;
+	object-fit: cover;
 	border-radius: 0.5rem;
 	outline: 0.2rem dashed gray;
-    margin: 0.5rem;
-    cursor: pointer;
-    filter: brightness(0.75);
-    transition: 0.5s;
+	margin: 0.5rem;
+	cursor: pointer;
+	filter: brightness(0.75);
+	transition: 0.5s;
 }
 .setting img:hover {
 	filter: none;
 }
 
 .desired {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 13rem;
-    height: 8rem;
-    background: white;
-    border-radius: 0.5rem;
-    outline: 0.2rem dashed gray;
-    margin: 0.5rem;
-    cursor: pointer;
-    transition: 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 13rem;
+	height: 8rem;
+	background: white;
+	border-radius: 0.5rem;
+	outline: 0.2rem dashed gray;
+	margin: 0.5rem;
+	cursor: pointer;
+	transition: 0.5s;
 }
 .desired:hover {
 	background: rgb(230, 230, 230);
@@ -137,23 +137,23 @@ hr {
 }
 
 .muezzins {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .muezzins button {
 	width: 13rem;
 	height: 4rem;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    outline: 0.2rem dashed rgb(0, 125, 75);
-    background: rgb(0, 150, 75);
-    color: white;
-    cursor: pointer;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	border: none;
+	border-radius: 0.5rem;
+	outline: 0.2rem dashed rgb(0, 125, 75);
+	background: rgb(0, 150, 75);
+	color: white;
+	cursor: pointer;
 	transition: 0.5s;
 }
 .muezzins button:hover {
@@ -173,18 +173,18 @@ main {
 }
 
 .clock {
-    margin: 1rem auto;
-    width: -webkit-fill-available;
-    width: -moz-available;
-    background: rgba(250,250,250,0.5);
-    border-top: 0.25rem solid white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.25rem;
-    padding: 0.5rem;
-    border-radius: 0 0 0.5rem 0.5rem;
-    cursor: default;
+	margin: 1rem auto;
+	width: -webkit-fill-available;
+	width: -moz-available;
+	background: rgba(250,250,250,0.5);
+	border-top: 0.25rem solid white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.25rem;
+	padding: 0.5rem;
+	border-radius: 0 0 0.5rem 0.5rem;
+	cursor: default;
 }
 
 .azan {
@@ -195,13 +195,13 @@ main {
 }
 
 input {
-    display: block;
-    padding: 0.5rem;
-    margin: 1rem auto;
-    width: -webkit-fill-available;
-    width: -moz-available;
-    border: none;
-    border-radius: 0.5rem;
+	display: block;
+	padding: 0.5rem;
+	margin: 1rem auto;
+	width: -webkit-fill-available;
+	width: -moz-available;
+	border: none;
+	border-radius: 0.5rem;
 }
 
 .city-infos {
@@ -210,10 +210,10 @@ input {
 		linear-gradient(336deg, rgba(245,235,255,.8), rgba(245,235,255,0) 70.71%);
 	width: -webkit-fill-available;
 	width: -moz-available;
-    display: block;
-    margin: 1rem auto;
-    border-radius: 0.5rem;
-    padding: 0 0.5rem;
+	display: block;
+	margin: 1rem auto;
+	border-radius: 0.5rem;
+	padding: 0 0.5rem;
 }
 
 .city-infos span {
@@ -223,13 +223,13 @@ input {
 
 .city-infos button {
 	display: none;
-    padding: 0.5rem;
-    margin: 1rem auto 0;
-    border: none;
-    border-radius: 0.5rem;
-    background: rgb(50, 150, 250);
-    color: white;
-    cursor: pointer;
+	padding: 0.5rem;
+	margin: 1rem auto 0;
+	border: none;
+	border-radius: 0.5rem;
+	background: rgb(50, 150, 250);
+	color: white;
+	cursor: pointer;
 	transition: 0.5s;
 }
 .city-infos button:hover {
@@ -237,11 +237,11 @@ input {
 }
 
 .version {
-    position: fixed;
-    bottom: 1rem;
-    left: 1rem;
-    color: rgba(255,255,255,0.75);
-    cursor: default;
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	color: rgba(255,255,255,0.75);
+	cursor: default;
 }
 
 .wrapper {
@@ -256,14 +256,14 @@ input {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-    background: white;
-    border-radius: 1rem;
-    min-width: 25%;
-    cursor: default;
-    overflow: hidden;
-    max-height: 0;
-    z-index: 9;
-    transition: 1s cubic-bezier(0.25, -0.25, 0, 1.5);
+	background: white;
+	border-radius: 1rem;
+	min-width: 25%;
+	cursor: default;
+	overflow: hidden;
+	max-height: 0;
+	z-index: 9;
+	transition: 1s cubic-bezier(0.25, -0.25, 0, 1.5);
 }
 
 .popup.show {
@@ -271,25 +271,23 @@ input {
 }
 
 .popup header {
-    border-radius: 1rem 1rem 0 0;
-    padding: 0.75rem;
+	border-radius: 1rem 1rem 0 0;
+	padding: 0.75rem;
 }
 
 .popup .main {
-    padding: 1rem;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
+	padding: 1rem;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .popup .main span {
-    padding: 1rem;
-    border-radius: 50%;
-    margin-right: 1rem;
+	padding: 1rem;
+	border-radius: 50%;
+	margin-right: 1rem;
 }
-
-
 
 .bg-ly {background: rgba(250, 200, 0, 0.25);}
 .c-y {color: rgb(250, 200, 0);}
