@@ -41,14 +41,14 @@ document.body.onload = () => {
 				ih(
 					qs('.city-infos .infos'),
 					`
-						نام شهر: ${city}
-						تاریخ: ${res.month}/${res.day}
-						اذان صبح: ${res.azan_sobh}
-						طلوع آفتاب: ${res.tolu_aftab}
-						اذان ظهر: ${res.azan_zohr}
-						غروب آفتاب: ${res.ghorub_aftab}
-						اذان مغرب: ${res.azan_maghreb}
-						نیمه شب شرعی: ${res.nimeshab}
+						<span>نام شهر: ${city}</span>
+						<span>تاریخ: ${res.month}/${res.day}</span>
+						<span>اذان صبح: ${res.azan_sobh}</span>
+						<span>طلوع آفتاب: ${res.tolu_aftab}</span>
+						<span>اذان ظهر: ${res.azan_zohr}</span>
+						<span>غروب آفتاب: ${res.ghorub_aftab}</span>
+						<span>اذان مغرب: ${res.azan_maghreb}</span>
+						<span>نیمه شب شرعی: ${res.nimeshab}</span>
 					`
 				);
 				qs('.city-infos').style.paddingBottom = '0.5rem';
@@ -62,19 +62,19 @@ document.body.onload = () => {
 					if (time == res.azan_sobh) {
 						qs('.azan').play();
 						wrapper();
-						qs('.notif .text').textContent = `اذان صبح به افق ${city}`
+						ih(qs('.notif .text'), `اذان صبح به افق ${city}`);
 						ca(qs('.notif'), 'show');
 					}
 					if (time == res.azan_zohr) {
 						qs('.azan').play();
 						wrapper();
-						qs('.notif .text').textContent = `اذان ظهر به افق ${city}`
+						ih(qs('.notif .text'), `اذان ظهر به افق ${city}`);
 						ca(qs('.notif'), 'show');
 					}
 					if (time == res.azan_maghreb) {
 						qs('.azan').play();
 						wrapper();
-						qs('.notif .text').textContent = `اذان مغرب به افق ${city}`
+						ih(qs('.notif .text'), `اذان مغرب به افق ${city}`);
 						ca(qs('.notif'), 'show');
 					}
 				});
@@ -86,14 +86,14 @@ document.body.onload = () => {
 								ih(
 									qs('.city-infos .infos'),
 									`
-										نام شهر: ${city}
-										تاریخ: ${res.month}/${res.day}
-										اذان صبح: ${res.azan_sobh}
-										طلوع آفتاب: ${res.tolu_aftab}
-										اذان ظهر: ${res.azan_zohr}
-										غروب آفتاب: ${res.ghorub_aftab}
-										اذان مغرب: ${res.azan_maghreb}
-										نیمه شب شرعی: ${res.nimeshab}
+										<span>نام شهر: ${city}</span>
+										<span>تاریخ: ${res.month}/${res.day}</span>
+										<span>اذان صبح: ${res.azan_sobh}</span>
+										<span>طلوع آفتاب: ${res.tolu_aftab}</span>
+										<span>اذان ظهر: ${res.azan_zohr}</span>
+										<span>غروب آفتاب: ${res.ghorub_aftab}</span>
+										<span>اذان مغرب: ${res.azan_maghreb}</span>
+										<span>نیمه شب شرعی: ${res.nimeshab}</span>
 									`
 								);
 							});
@@ -103,14 +103,14 @@ document.body.onload = () => {
 								ih(
 									qs('.city-infos .infos'),
 									`
-										نام شهر: ${city}
-										تاریخ: ${res.month}/${res.day}
-										اذان صبح: ${res.azan_sobh}
-										طلوع آفتاب: ${res.tolu_aftab}
-										اذان ظهر: ${res.azan_zohr}
-										غروب آفتاب: ${res.ghorub_aftab}
-										اذان مغرب: ${res.azan_maghreb}
-										نیمه شب شرعی: ${res.nimeshab}
+										<span>نام شهر: ${city}</span>
+										<span>تاریخ: ${res.month}/${res.day}</span>
+										<span>اذان صبح: ${res.azan_sobh}</span>
+										<span>طلوع آفتاب: ${res.tolu_aftab}</span>
+										<span>اذان ظهر: ${res.azan_zohr}</span>
+										<span>غروب آفتاب: ${res.ghorub_aftab}</span>
+										<span>اذان مغرب: ${res.azan_maghreb}</span>
+										<span>نیمه شب شرعی: ${res.nimeshab}</span>
 									`
 								);
 							});
@@ -122,14 +122,14 @@ document.body.onload = () => {
 								ih(
 									qs('.city-infos .infos'),
 									`
-										نام شهر: ${city}
-										تاریخ: ${res.month}/${res.day}
-										اذان صبح: ${res.azan_sobh}
-										طلوع آفتاب: ${res.tolu_aftab}
-										اذان ظهر: ${res.azan_zohr}
-										غروب آفتاب: ${res.ghorub_aftab}
-										اذان مغرب: ${res.azan_maghreb}
-										نیمه شب شرعی: ${res.nimeshab}
+										<span>نام شهر: ${city}</span>
+										<span>تاریخ: ${res.month}/${res.day}</span>
+										<span>اذان صبح: ${res.azan_sobh}</span>
+										<span>طلوع آفتاب: ${res.tolu_aftab}</span>
+										<span>اذان ظهر: ${res.azan_zohr}</span>
+										<span>غروب آفتاب: ${res.ghorub_aftab}</span>
+										<span>اذان مغرب: ${res.azan_maghreb}</span>
+										<span>نیمه شب شرعی: ${res.nimeshab}</span>
 									`
 								);
 							});
@@ -139,14 +139,14 @@ document.body.onload = () => {
 								ih(
 									qs('.city-infos .infos'),
 									`
-										نام شهر: ${city}
-										تاریخ: ${res.month}/${res.day}
-										اذان صبح: ${res.azan_sobh}
-										طلوع آفتاب: ${res.tolu_aftab}
-										اذان ظهر: ${res.azan_zohr}
-										غروب آفتاب: ${res.ghorub_aftab}
-										اذان مغرب: ${res.azan_maghreb}
-										نیمه شب شرعی: ${res.nimeshab}
+										<span>نام شهر: ${city}</span>
+										<span>تاریخ: ${res.month}/${res.day}</span>
+										<span>اذان صبح: ${res.azan_sobh}</span>
+										<span>طلوع آفتاب: ${res.tolu_aftab}</span>
+										<span>اذان ظهر: ${res.azan_zohr}</span>
+										<span>غروب آفتاب: ${res.ghorub_aftab}</span>
+										<span>اذان مغرب: ${res.azan_maghreb}</span>
+										<span>نیمه شب شرعی: ${res.nimeshab}</span>
 									`
 								);
 							});
