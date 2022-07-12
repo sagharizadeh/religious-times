@@ -53,7 +53,7 @@ document.body.onload = () => {
 				);
 				qs('.city-infos').style.paddingBottom = '0.5rem';
 				qs('.next-day').style.display = 'block';
-				si(30000, () => {
+				si(1000, () => {
 					let hr = new Date().getHours();
 					let min = new Date().getMinutes();
 					hr = hr < 10 ? '0' + hr : hr;
@@ -61,19 +61,25 @@ document.body.onload = () => {
 					let time = `${hr}:${min}`;
 					if (time == res.azan_sobh) {
 						qs('.azan').play();
-						wrapper();
+						if (!db.innerHTML.includes('<div class="wrapper"></div>')) {
+							wrapper();
+						}
 						ih(qs('.notif .text'), `اذان صبح به افق ${city}`);
 						ca(qs('.notif'), 'show');
 					}
 					if (time == res.azan_zohr) {
 						qs('.azan').play();
-						wrapper();
+						if (!db.innerHTML.includes('<div class="wrapper"></div>')) {
+							wrapper();
+						}
 						ih(qs('.notif .text'), `اذان ظهر به افق ${city}`);
 						ca(qs('.notif'), 'show');
 					}
 					if (time == res.azan_maghreb) {
 						qs('.azan').play();
-						wrapper();
+						if (!db.innerHTML.includes('<div class="wrapper"></div>')) {
+							wrapper();
+						}
 						ih(qs('.notif .text'), `اذان مغرب به افق ${city}`);
 						ca(qs('.notif'), 'show');
 					}
